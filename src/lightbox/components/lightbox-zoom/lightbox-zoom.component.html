@@ -1,0 +1,15 @@
+<div *ngIf="!config.controls.zoom.disable">
+    <button *ngIf="!config.controls.zoomOut.disable" [disable]="disableZoomOut" lightbox-icon-button (tap)="onZoomOut()" title="Zoom out">
+        <span class="material-icons">{{config.controls.zoomOut.icon}}</span>
+    </button>
+    <button *ngIf="!config.controls.resetZoom.disable" [disable]="disableResetZoom" lightbox-icon-button (tap)="onResetZoom()" title="Reset zoom">
+        <span class="material-icons">{{config.controls.resetZoom.icon}}</span>
+    </button>
+    <button *ngIf="!config.controls.feetToWidth.disable" [disable]="disableFeetToWidth" lightbox-icon-button (tap)="onFeetToWidth()" title="Feet to width">
+        <span class="material-icons">{{config.controls.feetToWidth.icon}}</span>
+    </button>
+    <button *ngIf="!config.controls.zoomIn.disable" [disable]="disableZoomIn" lightbox-icon-button (tap)="onZoomIn()" title="Zoom in">
+        <span class="material-icons">{{config.controls.zoomIn.icon}}</span>
+    </button>
+</div>
+

@@ -1,0 +1,22 @@
+:host {
+
+    z-index: 1;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    flex: 0 0 100%;
+    pointer-events: none;
+    >div{
+        pointer-events: auto;
+        position: relative;
+    }
+    img {
+        position: relative;
+        height: auto;
+        width: 100%;
+    }
+}

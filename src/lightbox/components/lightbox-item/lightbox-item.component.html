@@ -1,0 +1,22 @@
+<div
+    draggable="true"
+    (tap)="onClick($event)"
+    (pan)="onDrag($event)"
+    [@lightboxItemZoom]="lightboxItemZoomAnimator.animation"
+    (@lightboxItemZoom.start)="lightboxItemZoomAnimator.animationStart($event)"
+    (@lightboxItemZoom.done)="lightboxItemZoomAnimator.animationDone($event)">
+    <img #img lazy-loading
+        draggable="false"
+        [src]="getDefaultSrc()"
+        [xs-src]="item.xsSrc"
+        [sm-src]="item.smSrc"
+        [md-src]="item.mdSrc"
+        [lg-src]="item.lgSrc"
+        [xl-src]="item.xlSrc"
+        [xs-breakpoint]="item.xsBreakpoint"
+        [sm-breakpoint]="item.smBreakpoint"
+        [md-breakpoint]="item.mdBreakpoint"
+        [lg-breakpoint]="item.lgBreakpoint"
+        (load)="onLoad($event)"/>
+</div>
+

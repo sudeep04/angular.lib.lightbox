@@ -1,0 +1,66 @@
+<div class="lightbox-background"
+    [@backgroundVisibility]="backgroundVisibilityAnimator.animation"
+    (@backgroundVisibility.start)="backgroundVisibilityAnimator.animationStart($event)"
+    (@backgroundVisibility.done)="backgroundVisibilityAnimator.animationDone($event)">
+</div>
+
+<lightbox-toolbar #toolbar
+    [ngStyle]="{'order': config.controls.toolbar.position === 'top' ? 1 : 2 }"
+    [pagination]="pagination"
+    [title]="activeItem?.title"
+    (closeEvent)="onClose($event)"
+    (firstEvent)="onFirst()"
+    (previousEvent)="onPrevious()"
+    (nextEvent)="onNext()"
+    (lastEvent)="onLast()"
+    (thumbnailsToggleEvent)="thumbnailsToggle()">
+</lightbox-toolbar>
+
+<div class="lightbox-container"
+    [ngStyle]="{'order': config.controls.toolbar.position === 'bottom' ? 1 : 2 }"
+    [ngClass]="{'vertical-container': config.controls.thumbnails.position === 'left' || config.controls.thumbnails.position === 'right', 'horizontal-container': config.controls.thumbnails.position === 'top' || config.controls.thumbnails.position === 'bottom'}">
+    
+    <div class="lightbox-items-container"
+        [ngStyle]="{'order': config.controls.thumbnails.position === 'bottom' || config.controls.thumbnails.position === 'right' ? 1 : 2 }">
+        
+        <div #background 
+            [ngStyle]="{'visibility': state === 'closed' || state === 'closing' ? 'hidden' : 'visible' }" 
+            (tap)="onClose($event)" 
+            (swipeleft)="swipe($event.type)" 
+            (swiperight)="swipe($event.type)" 
+            class="lightbox-items-background">
+
+            <div *ngIf="activeItem" class="item-list" #itemList
+                [@lightboxSlice]="lightboxSliceAnimator.animation"
+                (@lightboxSlice.start)="lightboxSliceAnimator.animationStart($event)"
+                (@lightboxSlice.done)="lightboxSliceAnimator.animationDone($event)">
+                <lightbox-item (toggleEvent)="onToggle()" #lightboxItem *ngFor="let item of items[activeItem.container]" [item]="item">
+                </lightbox-item>
+            </div>
+        </div>
+
+        <lightbox-zoom #lightboxZoom
+            [style.visibility]="displayZoom"
+            [disableZoomIn]="disableZoomIn"
+            [disableZoomOut]="disableZoomOut"
+            [disableResetZoom]="disableResetZoom"
+            [disableFeetToWidth]="disableFeetToWidth"
+            (zoomInEvent)="zoomIn()"
+            (zoomOutEvent)="zoomOut()"
+            (resetZoomEvent)="resetZoom()"
+            (feetToWidthEvent)="feetToWidth()">
+        </lightbox-zoom>
+
+        <youtube
+            [ngStyle]="{'visibility': displayYoutube ? 'visible' : 'hidden' }" 
+            [videoId]="activeItem? getYoutubeVideoId() : undefined"
+             (ready)="onReady($event)"
+            (change)="onChange($event)"
+            (error)="onError($event)">
+        </youtube>
+
+    </div>
+    <lightbox-thumbnails [ngClass]="{'vertical-thumbnails': config.controls.thumbnails.position === 'left' || config.controls.thumbnails.position === 'right', 'horizontal-thumbnails': config.controls.thumbnails.position === 'top' || config.controls.thumbnails.position === 'bottom'}" #thumbnails [items]="activeItem? items[activeItem.container]:[]" (selectEvent)="selectItem($event)"
+    [ngStyle]="{'order': config.controls.thumbnails.position === 'top' || config.controls.thumbnails.position === 'left' ? 1 : 2 }">
+    </lightbox-thumbnails>
+</div>

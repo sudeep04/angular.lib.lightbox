@@ -1,0 +1,28 @@
+<div #thumnailsContainer
+    (swipeleft)="onSwipe($event)"
+    (swiperight)="onSwipe($event)"
+    (swipeup)="onSwipe($event)"
+    (swipedown)="onSwipe($event)"
+    (wheel)="onWheel($event)"
+    class="thumbnail-container">
+
+    <div #thumnailsList
+    [@thumbnailsSlice]="thumbnailsSliceAnimator.animation"
+    (@thumbnailsSlice.start)="thumbnailsSliceAnimator.animationStart($event)"
+    (@thumbnailsSlice.done)="thumbnailsSliceAnimator.animationDone($event)">
+        
+        <div #thumnails *ngFor="let item of items"
+            (tap)="onTap(item)"
+            [style.width]="thumbnailsWidth"
+            [style.height]="thumbnailsHeight"
+            [ngClass]="{'active': item === activeItem}"
+            class="thumbnail">
+
+            <img [src]="getItemSrc(item)" title="{{item.title}}"/>
+
+        </div><!-- END THUMNAILS -->
+
+    </div><!-- END THUMNAILS LIST -->
+
+</div><!-- END THUMNAILS CONTAINER -->
+

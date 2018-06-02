@@ -1,0 +1,1 @@
+[{"__symbolic":"module","version":4,"metadata":{"Animator":{"__symbolic":"class","arity":1,"members":{"__ctor__":[{"__symbolic":"constructor"}],"animationStart":[{"__symbolic":"method"}],"animationDone":[{"__symbolic":"method"}],"animate":[{"__symbolic":"method"}]}}}}]
