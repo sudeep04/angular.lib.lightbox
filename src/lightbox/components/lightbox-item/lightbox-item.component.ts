@@ -271,7 +271,7 @@ export class LightboxItemComponent implements OnInit {
         }
     }
 
-    protected onLoad(event: Event): void {
+    public onLoad(event: Event): void {
 
         if (!this.item.dimensions) {
 
