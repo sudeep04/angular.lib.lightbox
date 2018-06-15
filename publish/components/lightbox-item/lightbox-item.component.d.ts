@@ -27,7 +27,7 @@ export declare class LightboxItemComponent implements OnInit {
     isZoomMin(): boolean;
     isZoomMax(): boolean;
     onDrag(event: any): void;
-    protected onLoad(event: Event): void;
+    onLoad(event: Event): void;
     getDefaultSrc(): string;
     resize(): void;
     private _getContainerDimensions();
