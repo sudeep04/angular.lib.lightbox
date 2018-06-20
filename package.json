@@ -13,6 +13,9 @@
   "main": "dist/lightbox.umd.min.js",
   "module": "dist/index.js",
   "typings": "dist/index.d.ts",
+  "dependencies": {
+    "@types/hammerjs": "^2.0.35"
+  },
   "peerDependencies": {
     "@angular/animations": "^5.2.0",
     "@angular/common": "^5.2.0",
