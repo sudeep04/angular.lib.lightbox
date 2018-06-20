@@ -1,3 +1,10 @@
+/**
+ * lightbox - Angular Lightbox
+ * @version v1.0.0
+ * @author sveguru
+ * @link https://github.com/sudeep04/angular.lib.lightbox
+ * @license undefined
+ */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("@angular/core"), require("@angular/animations"), require("@angular/common"), require("rxjs/BehaviorSubject"), require("rxjs/add/operator/filter"), require("rxjs/add/operator/first"), require("@angular/platform-browser"), require("@angular/platform-browser/animations"), require("rxjs/add/operator/skip"));
@@ -1856,8 +1863,8 @@ var doom_service_1 = __webpack_require__(19);
 var lightbox_configuration_service_1 = __webpack_require__(2);
 var platform_browser_1 = __webpack_require__(21);
 var HammerConfig_1 = __webpack_require__(63);
-var lazy_loading_module_1 = __webpack_require__(64);
-var youtube_module_1 = __webpack_require__(66);
+var lazy_loading_1 = __webpack_require__(64);
+var youtube_1 = __webpack_require__(67);
 var LightboxModule = /** @class */ (function () {
     function LightboxModule() {
     }
@@ -1876,8 +1883,8 @@ var LightboxModule = /** @class */ (function () {
             imports: [
                 common_1.CommonModule,
                 animations_1.BrowserAnimationsModule,
-                lazy_loading_module_1.LazyLoadingModule,
-                youtube_module_1.YoutubeModule
+                lazy_loading_1.LazyLoadingModule,
+                youtube_1.YoutubeModule
             ],
             exports: [
                 lightbox_img_directive_1.LightboxImgDirective,
@@ -3141,10 +3148,20 @@ exports.HammerConfig = HammerConfig;
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__lazy_loading_module__ = __webpack_require__(65);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "LazyLoadingModule", function() { return __WEBPACK_IMPORTED_MODULE_0__lazy_loading_module__["a"]; });
+
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+/* 65 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__angular_core__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_doom_sensor_service__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__directives_lazy_loading_directive__ = __webpack_require__(65);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__directives_lazy_loading_directive__ = __webpack_require__(66);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__angular_common__);
 
@@ -3153,7 +3170,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 class LazyLoadingModule {
 }
-/* harmony export (immutable) */ __webpack_exports__["LazyLoadingModule"] = LazyLoadingModule;
+/* harmony export (immutable) */ __webpack_exports__["a"] = LazyLoadingModule;
 
 LazyLoadingModule.decorators = [
     { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"], args: [{
@@ -3176,7 +3193,7 @@ LazyLoadingModule.ctorParameters = () => [];
 //# sourceMappingURL=lazy-loading.module.js.map
 
 /***/ }),
-/* 65 */
+/* 66 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3319,18 +3336,28 @@ LazyLoadingDirective.propDecorators = {
 //# sourceMappingURL=lazy-loading.directive.js.map
 
 /***/ }),
-/* 66 */
+/* 67 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__youtube_module__ = __webpack_require__(68);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "YoutubeModule", function() { return __WEBPACK_IMPORTED_MODULE_0__youtube_module__["a"]; });
+
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+/* 68 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__angular_core__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__angular_common__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_youtube_api_service__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_youtube_player_service__ = __webpack_require__(23);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_youtube_component__ = __webpack_require__(67);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_youtube_component__ = __webpack_require__(69);
 
 
 
@@ -3338,7 +3365,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 class YoutubeModule {
 }
-/* harmony export (immutable) */ __webpack_exports__["YoutubeModule"] = YoutubeModule;
+/* harmony export (immutable) */ __webpack_exports__["a"] = YoutubeModule;
 
 YoutubeModule.decorators = [
     { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"], args: [{
@@ -3362,7 +3389,7 @@ YoutubeModule.ctorParameters = () => [];
 //# sourceMappingURL=youtube.module.js.map
 
 /***/ }),
-/* 67 */
+/* 69 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

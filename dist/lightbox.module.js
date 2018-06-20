@@ -14,8 +14,8 @@ import { DoomService } from './services/doom.service';
 import { LightboxConfigurationService } from './services/lightbox-configuration.service';
 import { HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
 import { HammerConfig } from './models/HammerConfig';
-import { LazyLoadingModule } from 'lazyloading/publish/lazy-loading.module';
-import { YoutubeModule } from 'youtube/publish/youtube.module';
+import { LazyLoadingModule } from 'lazy-loading';
+import { YoutubeModule } from 'youtube';
 export class LightboxModule {
 }
 LightboxModule.decorators = [
