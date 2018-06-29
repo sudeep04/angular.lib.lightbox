@@ -39,6 +39,17 @@ Lightbox component depend on the Angular animations in order to be able to do mo
 npm install --save @angular/animations
 ```
 
+```typescript
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
+@NgModule({
+  ...
+  imports: [BrowserAnimationsModule],
+  ...
+})
+export class AppModule { }
+```
+
 #### Install WebAnimation API and include a polyfill.
 
 [@angular/animations](https://www.npmjs.com/package/@angular/animation) uses the WebAnimation API that isn't supported by all browsers yet, so you need to install [web-animations-js](https://www.npmjs.com/package/web-animations-js).
