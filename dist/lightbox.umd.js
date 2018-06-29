@@ -7,14 +7,14 @@
  */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory(require("@angular/core"), require("@angular/animations"), require("@angular/common"), require("rxjs/BehaviorSubject"), require("rxjs/add/operator/filter"), require("rxjs/add/operator/first"), require("@angular/platform-browser"), require("@angular/platform-browser/animations"), require("rxjs/add/operator/skip"));
+		module.exports = factory(require("@angular/core"), require("@angular/animations"), require("@angular/common"), require("rxjs/BehaviorSubject"), require("rxjs/add/operator/filter"), require("rxjs/add/operator/first"), require("@angular/platform-browser"), require("rxjs/add/operator/skip"));
 	else if(typeof define === 'function' && define.amd)
-		define(["@angular/core", "@angular/animations", "@angular/common", "rxjs/BehaviorSubject", "rxjs/add/operator/filter", "rxjs/add/operator/first", "@angular/platform-browser", "@angular/platform-browser/animations", "rxjs/add/operator/skip"], factory);
+		define(["@angular/core", "@angular/animations", "@angular/common", "rxjs/BehaviorSubject", "rxjs/add/operator/filter", "rxjs/add/operator/first", "@angular/platform-browser", "rxjs/add/operator/skip"], factory);
 	else if(typeof exports === 'object')
-		exports["lightbox"] = factory(require("@angular/core"), require("@angular/animations"), require("@angular/common"), require("rxjs/BehaviorSubject"), require("rxjs/add/operator/filter"), require("rxjs/add/operator/first"), require("@angular/platform-browser"), require("@angular/platform-browser/animations"), require("rxjs/add/operator/skip"));
+		exports["lightbox"] = factory(require("@angular/core"), require("@angular/animations"), require("@angular/common"), require("rxjs/BehaviorSubject"), require("rxjs/add/operator/filter"), require("rxjs/add/operator/first"), require("@angular/platform-browser"), require("rxjs/add/operator/skip"));
 	else
-		root["lightbox"] = factory(root["ng"]["core"], root["ng"]["animations"], root["ng"]["common"], root["Rx"], root["Rx"], root["Rx"], root["ng"]["platformBrowser"], root["ng"]["platformBrowserAnimations"], root["Rx"]);
-})(typeof self !== 'undefined' ? self : this, function(__WEBPACK_EXTERNAL_MODULE_1__, __WEBPACK_EXTERNAL_MODULE_4__, __WEBPACK_EXTERNAL_MODULE_6__, __WEBPACK_EXTERNAL_MODULE_7__, __WEBPACK_EXTERNAL_MODULE_17__, __WEBPACK_EXTERNAL_MODULE_18__, __WEBPACK_EXTERNAL_MODULE_21__, __WEBPACK_EXTERNAL_MODULE_26__, __WEBPACK_EXTERNAL_MODULE_54__) {
+		root["lightbox"] = factory(root["ng"]["core"], root["ng"]["animations"], root["ng"]["common"], root["Rx"], root["Rx"], root["Rx"], root["ng"]["platformBrowser"], root["Rx"]);
+})(typeof self !== 'undefined' ? self : this, function(__WEBPACK_EXTERNAL_MODULE_1__, __WEBPACK_EXTERNAL_MODULE_4__, __WEBPACK_EXTERNAL_MODULE_6__, __WEBPACK_EXTERNAL_MODULE_7__, __WEBPACK_EXTERNAL_MODULE_17__, __WEBPACK_EXTERNAL_MODULE_18__, __WEBPACK_EXTERNAL_MODULE_21__, __WEBPACK_EXTERNAL_MODULE_53__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -561,7 +561,7 @@ var tslib_1 = __webpack_require__(0);
 var core_1 = __webpack_require__(1);
 __webpack_require__(17);
 __webpack_require__(18);
-__webpack_require__(54);
+__webpack_require__(53);
 var doom_service_1 = __webpack_require__(19);
 var LightboxService = /** @class */ (function () {
     function LightboxService(_doomService) {
@@ -683,9 +683,9 @@ var lightbox_toolbar_component_1 = __webpack_require__(13);
 var lightbox_thumbnails_component_1 = __webpack_require__(14);
 var lightbox_zoom_component_1 = __webpack_require__(15);
 var lightbox_configuration_service_1 = __webpack_require__(2);
-var lightbox_slice_animator_1 = __webpack_require__(47);
-var lightbox_animations_1 = __webpack_require__(48);
-var background_visibility_animator_1 = __webpack_require__(49);
+var lightbox_slice_animator_1 = __webpack_require__(46);
+var lightbox_animations_1 = __webpack_require__(47);
+var background_visibility_animator_1 = __webpack_require__(48);
 var dimensions_interface_1 = __webpack_require__(8);
 var LightboxComponent = /** @class */ (function () {
     function LightboxComponent(_lightboxConfigurationService) {
@@ -1017,8 +1017,8 @@ var LightboxComponent = /** @class */ (function () {
     LightboxComponent = tslib_1.__decorate([
         core_1.Component({
             selector: 'lightbox',
-            template: __webpack_require__(50),
-            styles: [__webpack_require__(51)],
+            template: __webpack_require__(49),
+            styles: [__webpack_require__(50)],
             animations: [lightbox_animations_1.LightboxAnimations.visibilityAnimation, lightbox_animations_1.LightboxAnimations.sliceAnimation],
             host: {
                 '[style.pointer-events]': '_pointerEvents',
@@ -1042,8 +1042,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var tslib_1 = __webpack_require__(0);
 var core_1 = __webpack_require__(1);
 var lightbox_configuration_service_1 = __webpack_require__(2);
-var toolbar_animations_1 = __webpack_require__(31);
-var toolbar_visibility_animator_1 = __webpack_require__(32);
+var toolbar_animations_1 = __webpack_require__(30);
+var toolbar_visibility_animator_1 = __webpack_require__(31);
 var LightboxToolbarComponent = /** @class */ (function () {
     function LightboxToolbarComponent(_lightboxConfigurationService) {
         this._lightboxConfigurationService = _lightboxConfigurationService;
@@ -1138,8 +1138,8 @@ var LightboxToolbarComponent = /** @class */ (function () {
     LightboxToolbarComponent = tslib_1.__decorate([
         core_1.Component({
             selector: 'lightbox-toolbar',
-            template: __webpack_require__(33),
-            styles: [__webpack_require__(34)],
+            template: __webpack_require__(32),
+            styles: [__webpack_require__(33)],
             animations: [toolbar_animations_1.ToolbarAnimations.visibilityAnimation],
             host: {
                 '[@toolbarVisibility]': 'toolbarVisibilityAnimator.animation',
@@ -1164,9 +1164,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var tslib_1 = __webpack_require__(0);
 var core_1 = __webpack_require__(1);
 var lightbox_configuration_service_1 = __webpack_require__(2);
-var thumbnails_animations_1 = __webpack_require__(36);
-var thumbnails_visibility_animator_1 = __webpack_require__(37);
-var thumbnails_slice_animator_1 = __webpack_require__(38);
+var thumbnails_animations_1 = __webpack_require__(35);
+var thumbnails_visibility_animator_1 = __webpack_require__(36);
+var thumbnails_slice_animator_1 = __webpack_require__(37);
 exports.WINDOW = new core_1.InjectionToken('Window');
 function _window() { return window; }
 exports._window = _window;
@@ -1380,8 +1380,8 @@ var LightboxThumbnailsComponent = /** @class */ (function () {
     LightboxThumbnailsComponent = tslib_1.__decorate([
         core_1.Component({
             selector: 'lightbox-thumbnails',
-            template: __webpack_require__(39),
-            styles: [__webpack_require__(40)],
+            template: __webpack_require__(38),
+            styles: [__webpack_require__(39)],
             animations: [thumbnails_animations_1.ThumbnailsAnimations.visibilityAnimation, thumbnails_animations_1.ThumbnailsAnimations.sliceAnimation],
             providers: [
                 { provide: exports.WINDOW, useFactory: _window }
@@ -1410,8 +1410,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var tslib_1 = __webpack_require__(0);
 var core_1 = __webpack_require__(1);
 var lightbox_configuration_service_1 = __webpack_require__(2);
-var zoom_animations_1 = __webpack_require__(42);
-var zoom_visibility_animator_1 = __webpack_require__(43);
+var zoom_animations_1 = __webpack_require__(41);
+var zoom_visibility_animator_1 = __webpack_require__(42);
 var LightboxZoomComponent = /** @class */ (function () {
     function LightboxZoomComponent(_lightboxConfigurationService) {
         this._lightboxConfigurationService = _lightboxConfigurationService;
@@ -1508,8 +1508,8 @@ var LightboxZoomComponent = /** @class */ (function () {
     LightboxZoomComponent = tslib_1.__decorate([
         core_1.Component({
             selector: 'lightbox-zoom',
-            template: __webpack_require__(44),
-            styles: [__webpack_require__(45)],
+            template: __webpack_require__(43),
+            styles: [__webpack_require__(44)],
             animations: [zoom_animations_1.ZoomAnimations.visibilityAnimation],
             host: {
                 '[@zoomVisibility]': 'zoomVisibilityAnimator.animation',
@@ -1849,22 +1849,21 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var tslib_1 = __webpack_require__(0);
 var core_1 = __webpack_require__(1);
 var common_1 = __webpack_require__(6);
-var animations_1 = __webpack_require__(26);
-var lightbox_button_component_1 = __webpack_require__(27);
+var lightbox_button_component_1 = __webpack_require__(26);
 var lightbox_component_1 = __webpack_require__(12);
 var lightbox_toolbar_component_1 = __webpack_require__(13);
-var lightbox_img_directive_1 = __webpack_require__(53);
-var lightbox_video_directive_1 = __webpack_require__(56);
-var lightbox_item_component_1 = __webpack_require__(57);
+var lightbox_img_directive_1 = __webpack_require__(52);
+var lightbox_video_directive_1 = __webpack_require__(55);
+var lightbox_item_component_1 = __webpack_require__(56);
 var lightbox_zoom_component_1 = __webpack_require__(15);
 var lightbox_thumbnails_component_1 = __webpack_require__(14);
 var lightbox_service_1 = __webpack_require__(9);
 var doom_service_1 = __webpack_require__(19);
 var lightbox_configuration_service_1 = __webpack_require__(2);
 var platform_browser_1 = __webpack_require__(21);
-var HammerConfig_1 = __webpack_require__(63);
-var lazy_loading_1 = __webpack_require__(64);
-var youtube_1 = __webpack_require__(67);
+var HammerConfig_1 = __webpack_require__(62);
+var lazy_loading_1 = __webpack_require__(63);
+var youtube_1 = __webpack_require__(66);
 var LightboxModule = /** @class */ (function () {
     function LightboxModule() {
     }
@@ -1882,7 +1881,6 @@ var LightboxModule = /** @class */ (function () {
             ],
             imports: [
                 common_1.CommonModule,
-                animations_1.BrowserAnimationsModule,
                 lazy_loading_1.LazyLoadingModule,
                 youtube_1.YoutubeModule
             ],
@@ -1909,12 +1907,6 @@ exports.LightboxModule = LightboxModule;
 
 /***/ }),
 /* 26 */
-/***/ (function(module, exports) {
-
-module.exports = __WEBPACK_EXTERNAL_MODULE_26__;
-
-/***/ }),
-/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1979,8 +1971,8 @@ var LightboxButtonComponent = /** @class */ (function () {
     LightboxButtonComponent = tslib_1.__decorate([
         core_1.Component({
             selector: 'button[lightbox-button], button[lightbox-icon-button]',
-            template: __webpack_require__(28),
-            styles: [__webpack_require__(29)],
+            template: __webpack_require__(27),
+            styles: [__webpack_require__(28)],
             animations: [
                 animations_1.trigger('hoverAnimation', [
                     animations_1.state('enter', animations_1.style({ backgroundColor: 'rgba(255, 255, 255, 0.3)' })),
@@ -2006,17 +1998,17 @@ exports.LightboxButtonComponent = LightboxButtonComponent;
 
 
 /***/ }),
-/* 28 */
+/* 27 */
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"button-focus-overlay\" [@hoverAnimation]=\"hoverAnimation\">\r\n    <ng-content></ng-content>\r\n</div>"
 
 /***/ }),
-/* 29 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-        var result = __webpack_require__(30);
+        var result = __webpack_require__(29);
 
         if (typeof result === "string") {
             module.exports = result;
@@ -2026,7 +2018,7 @@ module.exports = "<div class=\"button-focus-overlay\" [@hoverAnimation]=\"hoverA
     
 
 /***/ }),
-/* 30 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(5)(false);
@@ -2040,7 +2032,7 @@ exports.push([module.i, ":host {\n  color: inherit;\n  border: none;\n  cursor: 
 
 
 /***/ }),
-/* 31 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2059,7 +2051,7 @@ exports.ToolbarAnimations = {
 
 
 /***/ }),
-/* 32 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2108,17 +2100,17 @@ exports.ToolbarVisibilityAnimator = ToolbarVisibilityAnimator;
 
 
 /***/ }),
-/* 33 */
+/* 32 */
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"toolbar-container\">\r\n    <div>\r\n        <button lightbox-icon-button (tap)=\"onClose()\" title=\"Close\">\r\n            <span class=\"material-icons\">{{config.controls.back.icon}}</span>\r\n        </button>\r\n        <span class=\"toolbar-title\">{{title}}</span>\r\n    </div>\r\n    <div class=\"nav-menu\">\r\n        <button *ngIf=\"!config.controls.navigation.disable && !config.controls.jumpToStart.disable\" lightbox-icon-button [disable]=\"pagination.current===1\" (tap)=\"onFirst()\" title=\"First\">\r\n            <span class=\"material-icons\">{{config.controls.jumpToStart.icon}}</span>\r\n        </button>\r\n        <button *ngIf=\"!config.controls.navigation.disable && !config.controls.backward.disable\" lightbox-icon-button [disable]=\"pagination.current===1\" (tap)=\"onPrevious()\" title=\"Previous\">\r\n            <span class=\"material-icons\">{{config.controls.backward.icon}}</span>\r\n        </button>\r\n        <span *ngIf=\"!config.controls.navigation.disable && !config.controls.itemIndex.disable\" class=\"nav-pagination\">{{pagination?.current}} / {{pagination?.count}}</span>\r\n        <button *ngIf=\"!config.controls.navigation.disable && !config.controls.forward.disable\" lightbox-icon-button [disable]=\"pagination.current===pagination.count\" (tap)=\"onNext()\" title=\"Next\">\r\n            <span class=\"material-icons\">{{config.controls.forward.icon}}</span>\r\n        </button>\r\n        <button *ngIf=\"!config.controls.navigation.disable && !config.controls.jumpToEnd.disable\" lightbox-icon-button [disable]=\"pagination.current===pagination.count\" (tap)=\"onLast()\" title=\"Last\">\r\n            <span class=\"material-icons\">{{config.controls.jumpToEnd.icon}}</span>\r\n        </button>\r\n    </div>\r\n    <div>\r\n        <button *ngIf=\"!config.controls.thumbnails.disable\" lightbox-icon-button (tap)=\"onThumbnailsToggle()\" title=\"List\">\r\n            <span class=\"material-icons\">{{config.controls.thumbnails.icon}}</span>\r\n        </button>\r\n    </div>\r\n</div>"
 
 /***/ }),
-/* 34 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-        var result = __webpack_require__(35);
+        var result = __webpack_require__(34);
 
         if (typeof result === "string") {
             module.exports = result;
@@ -2128,7 +2120,7 @@ module.exports = "<div class=\"toolbar-container\">\r\n    <div>\r\n        <but
     
 
 /***/ }),
-/* 35 */
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(5)(false);
@@ -2142,7 +2134,7 @@ exports.push([module.i, ":host {\n  display: block;\n  position: relative;\n  ov
 
 
 /***/ }),
-/* 36 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2168,7 +2160,7 @@ exports.ThumbnailsAnimations = {
 
 
 /***/ }),
-/* 37 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2240,7 +2232,7 @@ exports.ThumbnailsVisibilityAnimator = ThumbnailsVisibilityAnimator;
 
 
 /***/ }),
-/* 38 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2286,17 +2278,17 @@ exports.ThumbnailsSliceAnimator = ThumbnailsSliceAnimator;
 
 
 /***/ }),
-/* 39 */
+/* 38 */
 /***/ (function(module, exports) {
 
 module.exports = "<div #thumnailsContainer\r\n    (swipeleft)=\"onSwipe($event)\"\r\n    (swiperight)=\"onSwipe($event)\"\r\n    (swipeup)=\"onSwipe($event)\"\r\n    (swipedown)=\"onSwipe($event)\"\r\n    (wheel)=\"onWheel($event)\"\r\n    class=\"thumbnail-container\">\r\n\r\n    <div #thumnailsList\r\n    [@thumbnailsSlice]=\"thumbnailsSliceAnimator.animation\"\r\n    (@thumbnailsSlice.start)=\"thumbnailsSliceAnimator.animationStart($event)\"\r\n    (@thumbnailsSlice.done)=\"thumbnailsSliceAnimator.animationDone($event)\">\r\n        \r\n        <div #thumnails *ngFor=\"let item of items\"\r\n            (tap)=\"onTap(item)\"\r\n            [style.width]=\"thumbnailsWidth\"\r\n            [style.height]=\"thumbnailsHeight\"\r\n            [ngClass]=\"{'active': item === activeItem}\"\r\n            class=\"thumbnail\">\r\n\r\n            <img [src]=\"getItemSrc(item)\" title=\"{{item.title}}\"/>\r\n\r\n        </div><!-- END THUMNAILS -->\r\n\r\n    </div><!-- END THUMNAILS LIST -->\r\n\r\n</div><!-- END THUMNAILS CONTAINER -->\r\n\r\n"
 
 /***/ }),
-/* 40 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-        var result = __webpack_require__(41);
+        var result = __webpack_require__(40);
 
         if (typeof result === "string") {
             module.exports = result;
@@ -2306,7 +2298,7 @@ module.exports = "<div #thumnailsContainer\r\n    (swipeleft)=\"onSwipe($event)\
     
 
 /***/ }),
-/* 41 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(5)(false);
@@ -2320,7 +2312,7 @@ exports.push([module.i, ":host {\n  background-color: #222;\n  flex: 1 1 0%;\n  
 
 
 /***/ }),
-/* 42 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2339,7 +2331,7 @@ exports.ZoomAnimations = {
 
 
 /***/ }),
-/* 43 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2388,17 +2380,17 @@ exports.ZoomVisibilityAnimator = ZoomVisibilityAnimator;
 
 
 /***/ }),
-/* 44 */
+/* 43 */
 /***/ (function(module, exports) {
 
 module.exports = "<div *ngIf=\"!config.controls.zoom.disable\">\r\n    <button *ngIf=\"!config.controls.zoomOut.disable\" [disable]=\"disableZoomOut\" lightbox-icon-button (tap)=\"onZoomOut()\" title=\"Zoom out\">\r\n        <span class=\"material-icons\">{{config.controls.zoomOut.icon}}</span>\r\n    </button>\r\n    <button *ngIf=\"!config.controls.resetZoom.disable\" [disable]=\"disableResetZoom\" lightbox-icon-button (tap)=\"onResetZoom()\" title=\"Reset zoom\">\r\n        <span class=\"material-icons\">{{config.controls.resetZoom.icon}}</span>\r\n    </button>\r\n    <button *ngIf=\"!config.controls.feetToWidth.disable\" [disable]=\"disableFeetToWidth\" lightbox-icon-button (tap)=\"onFeetToWidth()\" title=\"Feet to width\">\r\n        <span class=\"material-icons\">{{config.controls.feetToWidth.icon}}</span>\r\n    </button>\r\n    <button *ngIf=\"!config.controls.zoomIn.disable\" [disable]=\"disableZoomIn\" lightbox-icon-button (tap)=\"onZoomIn()\" title=\"Zoom in\">\r\n        <span class=\"material-icons\">{{config.controls.zoomIn.icon}}</span>\r\n    </button>\r\n</div>\r\n\r\n"
 
 /***/ }),
-/* 45 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-        var result = __webpack_require__(46);
+        var result = __webpack_require__(45);
 
         if (typeof result === "string") {
             module.exports = result;
@@ -2408,7 +2400,7 @@ module.exports = "<div *ngIf=\"!config.controls.zoom.disable\">\r\n    <button *
     
 
 /***/ }),
-/* 46 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(5)(false);
@@ -2422,7 +2414,7 @@ exports.push([module.i, ":host {\n  color: #fff;\n  height: 64px;\n  display: fl
 
 
 /***/ }),
-/* 47 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2456,7 +2448,7 @@ exports.LightboxSliceAnimator = LightboxSliceAnimator;
 
 
 /***/ }),
-/* 48 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2482,7 +2474,7 @@ exports.LightboxAnimations = {
 
 
 /***/ }),
-/* 49 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2531,17 +2523,17 @@ exports.BackgroundVisibilityAnimator = BackgroundVisibilityAnimator;
 
 
 /***/ }),
-/* 50 */
+/* 49 */
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"lightbox-background\"\r\n    [@backgroundVisibility]=\"backgroundVisibilityAnimator.animation\"\r\n    (@backgroundVisibility.start)=\"backgroundVisibilityAnimator.animationStart($event)\"\r\n    (@backgroundVisibility.done)=\"backgroundVisibilityAnimator.animationDone($event)\">\r\n</div>\r\n\r\n<lightbox-toolbar #toolbar\r\n    [ngStyle]=\"{'order': config.controls.toolbar.position === 'top' ? 1 : 2 }\"\r\n    [pagination]=\"pagination\"\r\n    [title]=\"activeItem?.title\"\r\n    (closeEvent)=\"onClose($event)\"\r\n    (firstEvent)=\"onFirst()\"\r\n    (previousEvent)=\"onPrevious()\"\r\n    (nextEvent)=\"onNext()\"\r\n    (lastEvent)=\"onLast()\"\r\n    (thumbnailsToggleEvent)=\"thumbnailsToggle()\">\r\n</lightbox-toolbar>\r\n\r\n<div class=\"lightbox-container\"\r\n    [ngStyle]=\"{'order': config.controls.toolbar.position === 'bottom' ? 1 : 2 }\"\r\n    [ngClass]=\"{'vertical-container': config.controls.thumbnails.position === 'left' || config.controls.thumbnails.position === 'right', 'horizontal-container': config.controls.thumbnails.position === 'top' || config.controls.thumbnails.position === 'bottom'}\">\r\n    \r\n    <div class=\"lightbox-items-container\"\r\n        [ngStyle]=\"{'order': config.controls.thumbnails.position === 'bottom' || config.controls.thumbnails.position === 'right' ? 1 : 2 }\">\r\n        \r\n        <div #background \r\n            [ngStyle]=\"{'visibility': state === 'closed' || state === 'closing' ? 'hidden' : 'visible' }\" \r\n            (tap)=\"onClose($event)\" \r\n            (swipeleft)=\"swipe($event.type)\" \r\n            (swiperight)=\"swipe($event.type)\" \r\n            class=\"lightbox-items-background\">\r\n\r\n            <div *ngIf=\"activeItem\" class=\"item-list\" #itemList\r\n                [@lightboxSlice]=\"lightboxSliceAnimator.animation\"\r\n                (@lightboxSlice.start)=\"lightboxSliceAnimator.animationStart($event)\"\r\n                (@lightboxSlice.done)=\"lightboxSliceAnimator.animationDone($event)\">\r\n                <lightbox-item (toggleEvent)=\"onToggle()\" #lightboxItem *ngFor=\"let item of items[activeItem.container]\" [item]=\"item\">\r\n                </lightbox-item>\r\n            </div>\r\n        </div>\r\n\r\n        <lightbox-zoom #lightboxZoom\r\n            [style.visibility]=\"displayZoom\"\r\n            [disableZoomIn]=\"disableZoomIn\"\r\n            [disableZoomOut]=\"disableZoomOut\"\r\n            [disableResetZoom]=\"disableResetZoom\"\r\n            [disableFeetToWidth]=\"disableFeetToWidth\"\r\n            (zoomInEvent)=\"zoomIn()\"\r\n            (zoomOutEvent)=\"zoomOut()\"\r\n            (resetZoomEvent)=\"resetZoom()\"\r\n            (feetToWidthEvent)=\"feetToWidth()\">\r\n        </lightbox-zoom>\r\n\r\n        <youtube\r\n            [ngStyle]=\"{'visibility': displayYoutube ? 'visible' : 'hidden' }\" \r\n            [videoId]=\"activeItem? getYoutubeVideoId() : undefined\"\r\n             (ready)=\"onReady($event)\"\r\n            (change)=\"onChange($event)\"\r\n            (error)=\"onError($event)\">\r\n        </youtube>\r\n\r\n    </div>\r\n    <lightbox-thumbnails [ngClass]=\"{'vertical-thumbnails': config.controls.thumbnails.position === 'left' || config.controls.thumbnails.position === 'right', 'horizontal-thumbnails': config.controls.thumbnails.position === 'top' || config.controls.thumbnails.position === 'bottom'}\" #thumbnails [items]=\"activeItem? items[activeItem.container]:[]\" (selectEvent)=\"selectItem($event)\"\r\n    [ngStyle]=\"{'order': config.controls.thumbnails.position === 'top' || config.controls.thumbnails.position === 'left' ? 1 : 2 }\">\r\n    </lightbox-thumbnails>\r\n</div>\r\n"
 
 /***/ }),
-/* 51 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-        var result = __webpack_require__(52);
+        var result = __webpack_require__(51);
 
         if (typeof result === "string") {
             module.exports = result;
@@ -2551,7 +2543,7 @@ module.exports = "<div class=\"lightbox-background\"\r\n    [@backgroundVisibili
     
 
 /***/ }),
-/* 52 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(5)(false);
@@ -2565,7 +2557,7 @@ exports.push([module.i, "lightbox {\n  pointer-events: none;\n  top: 0;\n  left:
 
 
 /***/ }),
-/* 53 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2575,7 +2567,7 @@ var tslib_1 = __webpack_require__(0);
 var core_1 = __webpack_require__(1);
 var item_directive_base_1 = __webpack_require__(16);
 var lightbox_service_1 = __webpack_require__(9);
-var img_1 = __webpack_require__(55);
+var img_1 = __webpack_require__(54);
 var LightboxImgDirective = /** @class */ (function (_super) {
     tslib_1.__extends(LightboxImgDirective, _super);
     function LightboxImgDirective(_lightboxService, _elementRef) {
@@ -2630,13 +2622,13 @@ exports.LightboxImgDirective = LightboxImgDirective;
 
 
 /***/ }),
-/* 54 */
+/* 53 */
 /***/ (function(module, exports) {
 
-module.exports = __WEBPACK_EXTERNAL_MODULE_54__;
+module.exports = __WEBPACK_EXTERNAL_MODULE_53__;
 
 /***/ }),
-/* 55 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2655,7 +2647,7 @@ exports.Img = Img;
 
 
 /***/ }),
-/* 56 */
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2728,7 +2720,7 @@ exports.LightboxVideoDirective = LightboxVideoDirective;
 
 
 /***/ }),
-/* 57 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2739,8 +2731,8 @@ var core_1 = __webpack_require__(1);
 var item_1 = __webpack_require__(10);
 var lightbox_configuration_service_1 = __webpack_require__(2);
 var video_1 = __webpack_require__(20);
-var lightbox_item_animations_1 = __webpack_require__(58);
-var lightbox_item_zoom_animator_1 = __webpack_require__(59);
+var lightbox_item_animations_1 = __webpack_require__(57);
+var lightbox_item_zoom_animator_1 = __webpack_require__(58);
 var dimensions_interface_1 = __webpack_require__(8);
 var ZOOM_PERCENT = 10;
 var ZOOM_MAX_AFTER_WIDTH = 3;
@@ -2973,8 +2965,8 @@ var LightboxItemComponent = /** @class */ (function () {
     LightboxItemComponent = tslib_1.__decorate([
         core_1.Component({
             selector: 'lightbox-item',
-            template: __webpack_require__(60),
-            styles: [__webpack_require__(61)],
+            template: __webpack_require__(59),
+            styles: [__webpack_require__(60)],
             animations: [lightbox_item_animations_1.LightboxItemAnimations.zoomAnimation]
         }),
         tslib_1.__metadata("design:paramtypes", [core_1.ElementRef,
@@ -2986,7 +2978,7 @@ exports.LightboxItemComponent = LightboxItemComponent;
 
 
 /***/ }),
-/* 58 */
+/* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3005,7 +2997,7 @@ exports.LightboxItemAnimations = {
 
 
 /***/ }),
-/* 59 */
+/* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3085,17 +3077,17 @@ exports.LightboxItemZoomAnimator = LightboxItemZoomAnimator;
 
 
 /***/ }),
-/* 60 */
+/* 59 */
 /***/ (function(module, exports) {
 
 module.exports = "<div\r\n    draggable=\"true\"\r\n    (tap)=\"onClick($event)\"\r\n    (pan)=\"onDrag($event)\"\r\n    [@lightboxItemZoom]=\"lightboxItemZoomAnimator.animation\"\r\n    (@lightboxItemZoom.start)=\"lightboxItemZoomAnimator.animationStart($event)\"\r\n    (@lightboxItemZoom.done)=\"lightboxItemZoomAnimator.animationDone($event)\">\r\n    <img #img lazy-loading\r\n        draggable=\"false\"\r\n        [src]=\"getDefaultSrc()\"\r\n        [xs-src]=\"item.xsSrc\"\r\n        [sm-src]=\"item.smSrc\"\r\n        [md-src]=\"item.mdSrc\"\r\n        [lg-src]=\"item.lgSrc\"\r\n        [xl-src]=\"item.xlSrc\"\r\n        [xs-breakpoint]=\"item.xsBreakpoint\"\r\n        [sm-breakpoint]=\"item.smBreakpoint\"\r\n        [md-breakpoint]=\"item.mdBreakpoint\"\r\n        [lg-breakpoint]=\"item.lgBreakpoint\"\r\n        (load)=\"onLoad($event)\"/>\r\n</div>\r\n\r\n"
 
 /***/ }),
-/* 61 */
+/* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-        var result = __webpack_require__(62);
+        var result = __webpack_require__(61);
 
         if (typeof result === "string") {
             module.exports = result;
@@ -3105,7 +3097,7 @@ module.exports = "<div\r\n    draggable=\"true\"\r\n    (tap)=\"onClick($event)\
     
 
 /***/ }),
-/* 62 */
+/* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(5)(false);
@@ -3119,7 +3111,7 @@ exports.push([module.i, ":host {\n  z-index: 1;\n  box-sizing: border-box;\n  di
 
 
 /***/ }),
-/* 63 */
+/* 62 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3143,25 +3135,25 @@ exports.HammerConfig = HammerConfig;
 
 
 /***/ }),
-/* 64 */
+/* 63 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__lazy_loading_module__ = __webpack_require__(65);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__lazy_loading_module__ = __webpack_require__(64);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "LazyLoadingModule", function() { return __WEBPACK_IMPORTED_MODULE_0__lazy_loading_module__["a"]; });
 
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 65 */
+/* 64 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__angular_core__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_doom_sensor_service__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__directives_lazy_loading_directive__ = __webpack_require__(66);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__directives_lazy_loading_directive__ = __webpack_require__(65);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__angular_common__);
 
@@ -3193,7 +3185,7 @@ LazyLoadingModule.ctorParameters = () => [];
 //# sourceMappingURL=lazy-loading.module.js.map
 
 /***/ }),
-/* 66 */
+/* 65 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3336,18 +3328,18 @@ LazyLoadingDirective.propDecorators = {
 //# sourceMappingURL=lazy-loading.directive.js.map
 
 /***/ }),
-/* 67 */
+/* 66 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__youtube_module__ = __webpack_require__(68);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__youtube_module__ = __webpack_require__(67);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "YoutubeModule", function() { return __WEBPACK_IMPORTED_MODULE_0__youtube_module__["a"]; });
 
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 68 */
+/* 67 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3357,7 +3349,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__angular_common__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_youtube_api_service__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_youtube_player_service__ = __webpack_require__(23);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_youtube_component__ = __webpack_require__(69);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_youtube_component__ = __webpack_require__(68);
 
 
 
@@ -3389,7 +3381,7 @@ YoutubeModule.ctorParameters = () => [];
 //# sourceMappingURL=youtube.module.js.map
 
 /***/ }),
-/* 69 */
+/* 68 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
