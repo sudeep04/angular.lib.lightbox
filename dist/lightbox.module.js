@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LightboxButtonComponent } from './components/lightbox-button/lightbox-button.component';
 import { LightboxComponent } from './components/lightbox/lightbox.component';
 import { LightboxToolbarComponent } from './components/lightbox-toolbar/lightbox-toolbar.component';
@@ -32,7 +31,6 @@ LightboxModule.decorators = [
                 ],
                 imports: [
                     CommonModule,
-                    BrowserAnimationsModule,
                     LazyLoadingModule,
                     YoutubeModule
                 ],

@@ -31,7 +31,6 @@ import { YoutubeModule } from 'youtube';
     ],
     imports: [
         CommonModule,
-        BrowserAnimationsModule,
         LazyLoadingModule,
         YoutubeModule
     ],
